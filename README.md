@@ -52,7 +52,7 @@ This is a fully static site. Deploy to any static host:
 
 - **Colors**: Edit CSS custom properties in `:root` at the top of `index.html`
 - **Content**: Edit the `translations` object in the `<script>` section
-- **WhatsApp Number**: Search and replace `5583999619497`
+- **WhatsApp Number**: Search and replace `99999999`
 - **Images**: Replace files in `assets/img/`
 
 ## Future Integration Ready
