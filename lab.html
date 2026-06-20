@@ -1042,6 +1042,47 @@
       }
     }
   </style>
+  <style>
+    /* AWAKEN LAB DARK THEME OVERRIDES */
+    :root {
+      --color-bg: #0A0A0A;
+      --color-bg-muted: #111111;
+      --color-text: #F5F5F5;
+      --color-text-muted: #A3A3A3;
+      --color-border: #333333;
+      --color-secondary: #0749a6;
+    }
+    
+    .nav {
+      background: rgba(10,10,10,0.9);
+      border-bottom: 1px solid var(--color-border);
+    }
+    
+    .nav.scrolled {
+      background: rgba(10,10,10,0.95);
+    }
+    
+    .card {
+      background: #151515;
+      border: 1px solid var(--color-border);
+    }
+    
+    .card:hover {
+      border-color: var(--color-secondary);
+    }
+    
+    .btn-primary {
+      background: var(--color-secondary);
+      color: #fff;
+    }
+    .btn-primary:hover {
+      background: #053b87;
+    }
+
+    .mobile-nav {
+      background: var(--color-bg);
+    }
+  </style>
 </head>
 <body>
 
@@ -1053,11 +1094,11 @@
 
       <!-- Desktop Navigation -->
       <ul class="nav-links" id="navLinks">
-        <li><a href="#about" class="nav-link" data-i18n="nav_about">About</a></li>
-        <li><a href="#method" class="nav-link" data-i18n="nav_method">Method</a></li>
-        <li><a href="#experience" class="nav-link" data-i18n="nav_experience">Experience</a></li>
-        <li><a href="#pricing" class="nav-link" data-i18n="nav_pricing">Pricing</a></li>
-        <li><a href="lab.html" class="nav-link" style="color: var(--color-secondary); font-weight: 700;">AWAKEN LAB</a></li>
+        <li><a href="index.html#about" class="nav-link" data-i18n="nav_about">About</a></li>
+        <li><a href="index.html#method" class="nav-link" data-i18n="nav_method">Method</a></li>
+        <li><a href="index.html#experience" class="nav-link" data-i18n="nav_experience">Experience</a></li>
+        <li><a href="index.html#pricing" class="nav-link" data-i18n="nav_pricing">Pricing</a></li>
+        <li><a href="#" class="nav-link" style="color: var(--color-secondary); font-weight: 700;">AWAKEN LAB</a></li>
         <li>
           <div class="lang-toggle" id="langToggleDesktop" role="group" aria-label="Language selector">
             <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
@@ -1087,11 +1128,11 @@
   <!-- Mobile Navigation Overlay -->
   <div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Mobile navigation">
     <button class="mobile-close" id="mobileClose" aria-label="Close menu">&times;</button>
-    <a href="#about" data-i18n="nav_about" onclick="closeMobileNav()">About</a>
-    <a href="#method" data-i18n="nav_method" onclick="closeMobileNav()">Method</a>
-    <a href="#experience" data-i18n="nav_experience" onclick="closeMobileNav()">Experience</a>
-    <a href="#pricing" data-i18n="nav_pricing" onclick="closeMobileNav()">Pricing</a>
-    <a href="lab.html" onclick="closeMobileNav()" style="color: var(--color-secondary); font-weight: 700;">AWAKEN LAB</a>
+    <a href="index.html#about" data-i18n="nav_about" onclick="closeMobileNav()">About</a>
+    <a href="index.html#method" data-i18n="nav_method" onclick="closeMobileNav()">Method</a>
+    <a href="index.html#experience" data-i18n="nav_experience" onclick="closeMobileNav()">Experience</a>
+    <a href="index.html#pricing" data-i18n="nav_pricing" onclick="closeMobileNav()">Pricing</a>
+    <a href="#" onclick="closeMobileNav()" style="color: var(--color-secondary); font-weight: 700;">AWAKEN LAB</a>
     <a href="https://wa.me/5583999619497" target="_blank" rel="noopener" class="btn btn-whatsapp" data-i18n="nav_cta" onclick="closeMobileNav()">Book Now</a>
   </div>
 
@@ -1099,305 +1140,138 @@
   <!-- ============================
        HERO SECTION
        ============================ -->
+  <!-- ============================
+       HERO SECTION - LAB
+       ============================ -->
   <header class="hero" id="hero">
-    <div class="hero-bg">
-      <img src="assets/img/hero.png" alt="Brazilian Jiu-Jitsu practitioner performing a technique in dramatic lighting" width="1920" height="1080" loading="eager">
-    </div>
-    <div class="hero-overlay"></div>
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <span class="eyebrow" data-i18n="lab_hero_eyebrow">Jiu-Jitsu Technical Study Sessions</span>
+        <h1 class="heading-display hero-title" data-i18n="lab_hero_title">Technique<br>conquers all</h1>
+        <p class="text-body text-light hero-subtitle" data-i18n="lab_hero_subtitle">Sessões de drill, análise técnica e refinamento do BJJ.</p>
 
-    <div class="container hero-content">
-      <div class="hero-eyebrow">
-        <span class="text-sm text-light tracking-wider uppercase font-medium" data-i18n="hero_eyebrow">Private Jiu-Jitsu Coaching — João Pessoa, Brazil</span>
-      </div>
-
-      <h1 class="heading-display heading-xl text-light hero-title" data-i18n="hero_title">Train With<br>Intention</h1>
-
-      <p class="text-body text-light hero-subtitle" data-i18n="hero_subtitle">Artisanal, individualized Brazilian Jiu-Jitsu training with a 2nd Degree Black Belt. Concept-driven coaching built for your evolution.</p>
-
-      <div class="hero-cta-group">
-        <a href="https://wa.me/5583999619497?text=Hi%2C%20I%27d%20like%20to%20schedule%20a%20private%20Jiu-Jitsu%20session." target="_blank" rel="noopener" class="btn btn-primary" id="heroCta">
-          <svg class="whatsapp-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          <span data-i18n="hero_cta_primary">Schedule Your Session</span>
-        </a>
-        <a href="#method" class="btn btn-outline" data-i18n="hero_cta_secondary">Learn More</a>
+        <div class="hero-cta-group">
+          <a href="https://wa.me/5583999619497" target="_blank" rel="noopener" class="btn btn-primary" id="heroCta">
+            <span data-i18n="lab_cta_primary">Entrar no grupo</span>
+          </a>
+          <a href="#concept" class="btn btn-secondary" data-i18n="lab_cta_secondary">Ver formato</a>
+        </div>
       </div>
     </div>
-
+    
     <div class="hero-scroll-indicator" aria-hidden="true">
-      <span data-i18n="hero_scroll">Scroll</span>
+      <span class="scroll-text" data-i18n="hero_scroll">Scroll</span>
       <div class="scroll-line"></div>
     </div>
   </header>
 
+  <!-- ============================
+       CONCEPT SECTION
+       ============================ -->
+  <section class="section" id="concept">
+    <div class="container">
+      <div class="section-header text-center fade-up">
+        <span class="eyebrow" data-i18n="lab_concept_eyebrow">O Conceito</span>
+        <h2 class="heading-display heading-lg" data-i18n="lab_concept_title">Estudo e Refinamento</h2>
+        <p class="text-body text-light" style="max-width: 600px; margin: 0 auto;" data-i18n="lab_concept_desc">Treinos focados em drill, estudo técnico e refinamento de movimento no Jiu-Jitsu. O objetivo não é sparring livre, mas estudo, repetição consciente e evolução técnica.</p>
+      </div>
+    </div>
+  </section>
 
   <!-- ============================
-       ABOUT / INSTRUCTOR PROFILE
+       HOW IT WORKS
        ============================ -->
-  <section class="about section-padding" id="about" aria-labelledby="aboutHeading">
+  <section class="section bg-muted" id="how-it-works">
     <div class="container">
-      <div class="about-grid">
-        <div class="about-image-wrap reveal">
-          <img src="assets/img/logo_transparent.png" alt="Awaken BJJ lotus flower emblem" width="800" height="800" loading="lazy">
-          <div class="about-image-label" style="bottom: 0;" data-i18n="about_label">2nd Degree Black Belt</div>
+      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-lg);">
+        <div class="card fade-up">
+          <h3 class="heading-display heading-md" data-i18n="lab_hw_1_title">1. Luta Referência</h3>
+          <p class="text-body text-muted" data-i18n="lab_hw_1_desc">Cada encontro parte da análise de uma luta referência para entender o timing, a alavanca e a aplicação em alto nível.</p>
         </div>
-
-        <div class="reveal reveal-delay-1">
-          <div class="section-divider">
-            <span class="section-number">01</span>
-          </div>
-
-          <div class="about-eyebrow">
-            <span class="text-xs uppercase tracking-wider font-semibold text-muted" data-i18n="about_eyebrow">Instructor Profile</span>
-          </div>
-
-          <h2 id="aboutHeading" class="heading-display heading-lg" data-i18n="about_title">Discipline.<br>Precision.<br>Evolution.</h2>
-
-          <div class="about-text text-body">
-            <p data-i18n="about_p1">With a 2nd Degree Black Belt in Brazilian Jiu-Jitsu and a Red and White Prajied in Muay Thai, the founder of Awaken brings over a decade of teaching and competitive experience to every session.</p>
-            <p data-i18n="about_p2">From training adults at Cascão BJJ since 2015 to developing children's programs at Roberto BJJ Kids, every lesson is shaped by real-world application, international exposure, and deep pedagogical care.</p>
-          </div>
-
-          <div class="about-stats">
-            <div>
-              <div class="stat-number">10+</div>
-              <div class="stat-label" data-i18n="stat_years">Years Teaching</div>
-            </div>
-            <div>
-              <div class="stat-number">5+</div>
-              <div class="stat-label" data-i18n="stat_countries">Countries</div>
-            </div>
-            <div>
-              <div class="stat-number">2°</div>
-              <div class="stat-label" data-i18n="stat_belt">Black Belt</div>
-            </div>
-          </div>
+        <div class="card fade-up" style="transition-delay: 100ms;">
+          <h3 class="heading-display heading-md" data-i18n="lab_hw_2_title">2. Drill Específico</h3>
+          <p class="text-body text-muted" data-i18n="lab_hw_2_desc">Repetição isolada do movimento. Construção da memória muscular e precisão biomecânica sem a resistência de um combate real.</p>
+        </div>
+        <div class="card fade-up" style="transition-delay: 200ms;">
+          <h3 class="heading-display heading-md" data-i18n="lab_hw_3_title">3. Foco Técnico</h3>
+          <p class="text-body text-muted" data-i18n="lab_hw_3_desc">Aplicação com resistência progressiva. Resolução de problemas nas posições e detalhamento refinado das mecânicas ocultas.</p>
         </div>
       </div>
     </div>
   </section>
 
-
   <!-- ============================
-       TEACHING METHOD
+       FREE DRILL
        ============================ -->
-  <section class="method section-padding" id="method" aria-labelledby="methodHeading">
-    <div class="method-bg-text" aria-hidden="true">METHOD</div>
-
+  <section class="section" id="free-drill">
     <div class="container">
-      <div class="method-header reveal">
-        <div class="section-divider section-divider-dark" style="justify-content: center;">
-          <span class="section-number">02</span>
-        </div>
-        <span class="text-xs uppercase tracking-wider font-semibold text-muted" data-i18n="method_eyebrow">Teaching Philosophy</span>
-        <h2 id="methodHeading" class="heading-display heading-lg" style="margin-top: var(--space-sm);" data-i18n="method_title">Concept Over<br>Repetition</h2>
-      </div>
-
-      <div class="method-grid">
-        <div class="method-card reveal">
-          <div class="method-card-number">01</div>
-          <h3 class="method-card-title" data-i18n="method_1_title">Concept-Driven Learning</h3>
-          <p class="text-body" data-i18n="method_1_desc">Understanding the 'why' behind every technique. Each movement is taught as part of an interconnected system, not an isolated sequence.</p>
-        </div>
-        <div class="method-card reveal reveal-delay-1">
-          <div class="method-card-number">02</div>
-          <h3 class="method-card-title" data-i18n="method_2_title">Pattern Recognition</h3>
-          <p class="text-body" data-i18n="method_2_desc">Training your mind to read positions and anticipate transitions. Building intuitive decision-making that transcends memorization.</p>
-        </div>
-        <div class="method-card reveal reveal-delay-2">
-          <div class="method-card-number">03</div>
-          <h3 class="method-card-title" data-i18n="method_3_title">High-Percentage Techniques</h3>
-          <p class="text-body" data-i18n="method_3_desc">Only proven, battle-tested techniques refined through years of competition and teaching. No filler — every minute of training has purpose.</p>
-        </div>
-        <div class="method-card reveal reveal-delay-3">
-          <div class="method-card-number">04</div>
-          <h3 class="method-card-title" data-i18n="method_4_title">Adaptive Instruction</h3>
-          <p class="text-body" data-i18n="method_4_desc">Creative, personalized coaching that adapts to your body type, learning style, and goals. Your journey is unique — your training should be too.</p>
-        </div>
+      <div class="card" style="display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 800px; margin: 0 auto;">
+        <span class="eyebrow" data-i18n="lab_drill_eyebrow">Prática Autônoma</span>
+        <h2 class="heading-display heading-lg" data-i18n="lab_drill_title">Drill Livre</h2>
+        <p class="text-body text-muted" data-i18n="lab_drill_desc">Tempo dedicado para você e seu parceiro trabalharem posições específicas, tirarem dúvidas e polirem o jogo com supervisão técnica, sem pressão de rendimento.</p>
       </div>
     </div>
   </section>
 
-
   <!-- ============================
-       EXPERIENCE & CREDENTIALS
+       AUDIENCE
        ============================ -->
-  <section class="experience section-padding" id="experience" aria-labelledby="expHeading">
+  <section class="section bg-muted" id="audience">
     <div class="container">
-      <div class="exp-header reveal">
-        <div class="section-divider">
-          <span class="section-number">03</span>
-        </div>
-        <span class="text-xs uppercase tracking-wider font-semibold text-muted" data-i18n="exp_eyebrow">Credentials</span>
-        <h2 id="expHeading" class="heading-display heading-lg" style="margin-top: var(--space-sm);" data-i18n="exp_title">Proven on the<br>Mat & Beyond</h2>
-      </div>
-
-      <div class="exp-columns">
-        <div class="reveal">
-          <h3 class="exp-column-title" data-i18n="exp_col1_title">Competition & Titles</h3>
-          <ul class="exp-list text-body">
-            <li data-i18n="exp_t1">Pan-American Champion</li>
-            <li data-i18n="exp_t2">Brazilian National Champion</li>
-            <li data-i18n="exp_t3">Paraibano Champion</li>
-            <li data-i18n="exp_t4">North-Northeast Champion</li>
-            <li data-i18n="exp_t5">2nd Degree Black Belt in BJJ</li>
-            <li data-i18n="exp_t6">Red and White Prajied — Muay Thai</li>
+      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-lg);">
+        <div class="card fade-up" style="border-left: 4px solid var(--color-secondary);">
+          <h3 class="heading-display heading-md" data-i18n="lab_for_title">Para quem é</h3>
+          <ul class="text-body text-muted" style="list-style-type: disc; margin-left: var(--space-sm);">
+            <li data-i18n="lab_for_1">Quem quer entender a biomecânica das posições.</li>
+            <li data-i18n="lab_for_2">Atletas buscando refinar movimentos antes da exaustão.</li>
+            <li data-i18n="lab_for_3">Praticantes que valorizam a repetição inteligente.</li>
           </ul>
         </div>
-
-        <div class="reveal reveal-delay-2">
-          <h3 class="exp-column-title" data-i18n="exp_col2_title">International & Certifications</h3>
-          <ul class="exp-list text-body">
-            <li data-i18n="exp_i1">Seminars in USA: Nevada, Washington, Massachusetts</li>
-            <li data-i18n="exp_i2">Instructor at Gracie Stockholm, Sweden</li>
-            <li data-i18n="exp_i3">First Aid, CPR & Trauma Training certified</li>
-            <li data-i18n="exp_i4">Instructor — Women's Self-Defense Workshop (Federal Prosecutor's Office, 2026)</li>
-            <li data-i18n="exp_i5">Founder: Awaken brand — events, seminars & book</li>
-            <li data-i18n="exp_i6">Fluent in Portuguese & English</li>
+        <div class="card fade-up" style="border-left: 4px solid #cc0000; transition-delay: 100ms;">
+          <h3 class="heading-display heading-md" data-i18n="lab_not_title">O que não é</h3>
+          <ul class="text-body text-muted" style="list-style-type: disc; margin-left: var(--space-sm);">
+            <li data-i18n="lab_not_1">Não é dia de 'porradaria' ou sparring de alta intensidade.</li>
+            <li data-i18n="lab_not_2">Não é para quem busca apenas suar sem pensar.</li>
+            <li data-i18n="lab_not_3">Não é uma aula convencional com dezenas de posições.</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-
   <!-- ============================
-       WHO IT'S FOR
+       LOCATIONS & STRUCTURE
        ============================ -->
-  <section class="audience section-padding" id="audience" aria-labelledby="audienceHeading">
+  <section class="section" id="locations">
     <div class="container">
-      <div class="audience-header reveal">
-        <div class="section-divider" style="justify-content: center;">
-          <span class="section-number">04</span>
-        </div>
-        <span class="text-xs uppercase tracking-wider font-semibold text-muted" data-i18n="audience_eyebrow">Who It's For</span>
-        <h2 id="audienceHeading" class="heading-display heading-lg" style="margin-top: var(--space-sm);" data-i18n="audience_title">Built For You</h2>
+      <div class="section-header text-center fade-up">
+        <h2 class="heading-display heading-lg" data-i18n="lab_locations_title">Locais e Estrutura</h2>
       </div>
-
-      <div class="audience-grid">
-        <div class="audience-card reveal">
-          <div class="audience-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M5 20c0-3.5 3.1-6 7-6s7 2.5 7 6"/></svg>
-          </div>
-          <h3 data-i18n="aud_1_title">Beginners</h3>
-          <p data-i18n="aud_1_desc">Start your journey with a structured, safe, and personalized introduction to Jiu-Jitsu fundamentals.</p>
-        </div>
-
-        <div class="audience-card reveal reveal-delay-1">
-          <div class="audience-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-          </div>
-          <h3 data-i18n="aud_2_title">Advanced Athletes</h3>
-          <p data-i18n="aud_2_desc">Sharpen your game with competition-level coaching, advanced concepts, and strategic sparring analysis.</p>
-        </div>
-
-        <div class="audience-card reveal reveal-delay-2">
-          <div class="audience-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a4 4 0 014 4c0 2-2 3-4 3s-4-1-4-3a4 4 0 014-4z"/><path d="M8 14c-2 0-4 1.5-4 4v2h16v-2c0-2.5-2-4-4-4"/><circle cx="8" cy="10" r="2"/><circle cx="16" cy="10" r="2"/></svg>
-          </div>
-          <h3 data-i18n="aud_3_title">Children & Neurodivergent</h3>
-          <p data-i18n="aud_3_desc">Specialized experience with ASD, ADHD, and ODD students. Patient, adaptive, structured coaching for young practitioners.</p>
-        </div>
-
-        <div class="audience-card reveal reveal-delay-3">
-          <div class="audience-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10A15.3 15.3 0 0112 2z"/></svg>
-          </div>
-          <h3 data-i18n="aud_4_title">Travelers</h3>
-          <p data-i18n="aud_4_desc">English-speaking visitors in Brazil — train authentic BJJ with a bilingual instructor who understands cross-cultural coaching.</p>
+      <div class="grid" style="grid-template-columns: 1fr; max-width: 600px; margin: 0 auto;">
+        <div class="card fade-up text-center">
+          <h3 class="heading-display heading-md">João Pessoa, PB</h3>
+          <p class="text-body text-muted" data-i18n="lab_locations_desc">A definir. O formato será itinerante ou em local fixo selecionado para garantir a melhor experiência de aprendizado.</p>
         </div>
       </div>
     </div>
   </section>
-
-
-  <!-- ============================
-       PRICING
-       ============================ -->
-  <section class="pricing section-padding" id="pricing" aria-labelledby="pricingHeading">
-    <div class="container">
-      <div class="reveal" style="text-align: center; margin-bottom: var(--space-3xl);">
-        <div class="section-divider" style="justify-content: center;">
-          <span class="section-number">05</span>
-        </div>
-        <span class="text-xs uppercase tracking-wider font-semibold text-muted" data-i18n="pricing_eyebrow">Investment</span>
-        <h2 id="pricingHeading" class="heading-display heading-lg" style="margin-top: var(--space-sm);" data-i18n="pricing_title">Private Sessions</h2>
-      </div>
-
-      <div class="pricing-grid reveal reveal-delay-1">
-        <div class="pricing-info">
-          <span class="text-xs uppercase tracking-wider font-medium" style="color: var(--color-secondary); margin-bottom: var(--space-sm);" data-i18n="pricing_starting">Starting at</span>
-          <div class="pricing-price">$80<span style="font-size: 0.4em; opacity: 0.6;">/hr</span></div>
-          <div class="pricing-price-sub" data-i18n="pricing_per">Per Hour — Private Session</div>
-          <p data-i18n="pricing_desc">Each session is fully personalized to your level, goals, and learning pace. No group dynamics, no wasted time — pure, focused evolution on the mat.</p>
-          <a href="https://wa.me/5583999619497?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20pricing%20for%20private%20sessions." target="_blank" rel="noopener" class="btn btn-whatsapp" style="margin-top: var(--space-xl); align-self: flex-start;">
-            <svg class="whatsapp-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            <span data-i18n="pricing_cta">Get Pricing Details</span>
-          </a>
-        </div>
-
-        <div class="pricing-details">
-          <h3 data-i18n="pricing_includes">What's Included</h3>
-
-          <div class="pricing-feature">
-            <span class="pricing-check">✓</span>
-            <span data-i18n="pricing_f1">Fully personalized lesson plan tailored to your goals</span>
-          </div>
-          <div class="pricing-feature">
-            <span class="pricing-check">✓</span>
-            <span data-i18n="pricing_f2">Concept-based instruction with position-by-position breakdown</span>
-          </div>
-          <div class="pricing-feature">
-            <span class="pricing-check">✓</span>
-            <span data-i18n="pricing_f3">Video analysis and homework between sessions</span>
-          </div>
-          <div class="pricing-feature">
-            <span class="pricing-check">✓</span>
-            <span data-i18n="pricing_f4">Flexible scheduling — train at your pace</span>
-          </div>
-          <div class="pricing-feature">
-            <span class="pricing-check">✓</span>
-            <span data-i18n="pricing_f5">Bilingual instruction (English & Portuguese)</span>
-          </div>
-          <div class="pricing-feature">
-            <span class="pricing-check">✓</span>
-            <span data-i18n="pricing_f6">First Aid & CPR certified instructor</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
 
   <!-- ============================
        FINAL CTA
        ============================ -->
-  <section class="final-cta section-padding" id="contact" aria-labelledby="ctaHeading">
-    <div class="final-cta-bg">
-      <img src="assets/img/mat.png" alt="" width="1920" height="600" loading="lazy" aria-hidden="true">
-    </div>
+  <section class="section bg-muted" id="cta" style="border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+    <div class="container" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+      <span class="eyebrow" data-i18n="lab_cta_final_eyebrow">Faça parte</span>
+      <h2 class="heading-display heading-xl" data-i18n="lab_cta_final_title">Evolução<br>Consciente</h2>
+      <p class="text-body text-light" style="max-width: 500px; margin-bottom: var(--space-lg);" data-i18n="lab_cta_final_desc">Junte-se ao grupo focado no refinamento técnico e leve seu Jiu-Jitsu para o próximo nível.</p>
 
-    <div class="container final-cta-content reveal">
-      <div class="section-divider section-divider-dark" style="justify-content: center;">
-        <span class="section-number">06</span>
-      </div>
-      <span class="text-xs uppercase tracking-wider font-semibold text-muted" data-i18n="cta_eyebrow">Ready to Begin?</span>
-      <h2 id="ctaHeading" class="heading-display heading-lg text-light" style="margin-top: var(--space-sm);" data-i18n="cta_title">Your Evolution<br>Starts Now</h2>
-      <p class="text-body text-light" data-i18n="cta_desc">One conversation is all it takes. Reach out on WhatsApp, and let's design a training path built exclusively for you.</p>
-
-      <div style="display: flex; justify-content: center; gap: var(--space-sm); flex-wrap: wrap;">
-        <a href="https://wa.me/5583999619497?text=Hi%2C%20I%27d%20like%20to%20schedule%20a%20private%20Jiu-Jitsu%20session." target="_blank" rel="noopener" class="btn btn-whatsapp" id="finalCta">
-          <svg class="whatsapp-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          <span data-i18n="cta_btn">Book via WhatsApp</span>
-        </a>
-      </div>
+      <a href="https://wa.me/5583999619497" target="_blank" rel="noopener" class="btn btn-whatsapp" id="finalCta">
+        <svg class="whatsapp-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span data-i18n="lab_cta_btn">Falar no WhatsApp</span>
+      </a>
     </div>
   </section>
-
-
-  <!-- ============================
-       FOOTER
-       ============================ -->
-  <footer class="footer" role="contentinfo">
+\n  <footer class="footer" role="contentinfo">
     <div class="container footer-inner">
       <span class="footer-logo">Awaken</span>
       <p data-i18n="footer_text">© 2026 Awaken BJJ. João Pessoa, Paraíba, Brazil.</p>
@@ -1510,6 +1384,39 @@
         cta_desc: 'One conversation is all it takes. Reach out on WhatsApp, and let\'s design a training path built exclusively for you.',
         cta_btn: 'Book via WhatsApp',
 
+        // Lab Page
+        lab_hero_eyebrow: 'Jiu-Jitsu Technical Study Sessions',
+        lab_hero_title: 'Technique<br>conquers all',
+        lab_hero_subtitle: 'Drill sessions, technical analysis, and BJJ refinement.',
+        lab_cta_primary: 'Join the Group',
+        lab_cta_secondary: 'View Format',
+        lab_concept_eyebrow: 'The Concept',
+        lab_concept_title: 'Study and Refinement',
+        lab_concept_desc: 'Training focused on drilling, technical study, and movement refinement in Jiu-Jitsu. The goal is not free sparring, but study, conscious repetition, and technical evolution.',
+        lab_hw_1_title: '1. Reference Match',
+        lab_hw_1_desc: 'Each meeting starts with the analysis of a reference match to understand the timing, leverage, and application at a high level.',
+        lab_hw_2_title: '2. Specific Drill',
+        lab_hw_2_desc: 'Isolated repetition of the movement. Building muscle memory and biomechanical precision without the resistance of real combat.',
+        lab_hw_3_title: '3. Technical Focus',
+        lab_hw_3_desc: 'Application with progressive resistance. Problem-solving in positions and detailed refinement of hidden mechanics.',
+        lab_drill_eyebrow: 'Autonomous Practice',
+        lab_drill_title: 'Free Drill',
+        lab_drill_desc: 'Dedicated time for you and your partner to work on specific positions, ask questions, and polish your game with technical supervision, without performance pressure.',
+        lab_for_title: 'Who it is for',
+        lab_for_1: 'Those who want to understand the biomechanics of positions.',
+        lab_for_2: 'Athletes looking to refine movements before exhaustion.',
+        lab_for_3: 'Practitioners who value intelligent repetition.',
+        lab_not_title: 'What it is not',
+        lab_not_1: 'It is not a day for hard sparring or high-intensity rolls.',
+        lab_not_2: 'It is not for those who just want to sweat without thinking.',
+        lab_not_3: 'It is not a conventional class with dozens of positions.',
+        lab_locations_title: 'Locations and Structure',
+        lab_locations_desc: 'To be defined. The format will be itinerant or in a fixed location selected to ensure the best learning experience.',
+        lab_cta_final_eyebrow: 'Be Part of It',
+        lab_cta_final_title: 'Conscious<br>Evolution',
+        lab_cta_final_desc: 'Join the group focused on technical refinement and take your Jiu-Jitsu to the next level.',
+        lab_cta_btn: 'Contact via WhatsApp',
+
         // Footer
         footer_text: '© 2026 Awaken BJJ. João Pessoa, Paraíba, Brazil.'
       },
@@ -1603,6 +1510,39 @@
         cta_desc: 'Uma conversa é tudo o que é preciso. Entre em contato pelo WhatsApp e vamos desenhar um caminho de treinamento feito exclusivamente para você.',
         cta_btn: 'Agende pelo WhatsApp',
 
+        // Lab Page
+        lab_hero_eyebrow: 'Jiu-Jitsu Technical Study Sessions',
+        lab_hero_title: 'Technique<br>conquers all',
+        lab_hero_subtitle: 'Sessões de drill, análise técnica e refinamento do BJJ.',
+        lab_cta_primary: 'Entrar no grupo',
+        lab_cta_secondary: 'Ver formato',
+        lab_concept_eyebrow: 'O Conceito',
+        lab_concept_title: 'Estudo e Refinamento',
+        lab_concept_desc: 'Treinos focados em drill, estudo técnico e refinamento de movimento no Jiu-Jitsu. O objetivo não é sparring livre, mas estudo, repetição consciente e evolução técnica.',
+        lab_hw_1_title: '1. Luta Referência',
+        lab_hw_1_desc: 'Cada encontro parte da análise de uma luta referência para entender o timing, a alavanca e a aplicação em alto nível.',
+        lab_hw_2_title: '2. Drill Específico',
+        lab_hw_2_desc: 'Repetição isolada do movimento. Construção da memória muscular e precisão biomecânica sem a resistência de um combate real.',
+        lab_hw_3_title: '3. Foco Técnico',
+        lab_hw_3_desc: 'Aplicação com resistência progressiva. Resolução de problemas nas posições e detalhamento refinado das mecânicas ocultas.',
+        lab_drill_eyebrow: 'Prática Autônoma',
+        lab_drill_title: 'Drill Livre',
+        lab_drill_desc: 'Tempo dedicado para você e seu parceiro trabalharem posições específicas, tirarem dúvidas e polirem o jogo com supervisão técnica, sem pressão de rendimento.',
+        lab_for_title: 'Para quem é',
+        lab_for_1: 'Quem quer entender a biomecânica das posições.',
+        lab_for_2: 'Atletas buscando refinar movimentos antes da exaustão.',
+        lab_for_3: 'Praticantes que valorizam a repetição inteligente.',
+        lab_not_title: 'O que não é',
+        lab_not_1: 'Não é dia de "porradaria" ou sparring de alta intensidade.',
+        lab_not_2: 'Não é para quem busca apenas suar sem pensar.',
+        lab_not_3: 'Não é uma aula convencional com dezenas de posições.',
+        lab_locations_title: 'Locais e Estrutura',
+        lab_locations_desc: 'A definir. O formato será itinerante ou em local fixo selecionado para garantir a melhor experiência de aprendizado.',
+        lab_cta_final_eyebrow: 'Faça parte',
+        lab_cta_final_title: 'Evolução<br>Consciente',
+        lab_cta_final_desc: 'Junte-se ao grupo focado no refinamento técnico e leve seu Jiu-Jitsu para o próximo nível.',
+        lab_cta_btn: 'Falar no WhatsApp',
+
         // Footer
         footer_text: '© 2026 Awaken BJJ. João Pessoa, Paraíba, Brasil.'
       }
@@ -1630,8 +1570,8 @@
 
       // Update page title
       document.title = lang === 'pt'
-        ? 'Awaken — Aulas Particulares de Jiu-Jitsu | João Pessoa, Brasil'
-        : 'Awaken — Private Jiu-Jitsu Coaching | João Pessoa, Brazil';
+        ? 'Awaken Lab — Estudo Técnico e Refinamento de Jiu-Jitsu'
+        : 'Awaken Lab — Technical Study and Refinement in Jiu-Jitsu';
 
       // Update meta description
       const metaDesc = document.querySelector('meta[name="description"]');
