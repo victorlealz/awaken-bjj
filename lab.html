@@ -1,34 +1,28 @@
 <!DOCTYPE html>
-<html lang="en" id="root">
+<html lang="pt-BR" id="root">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Private Jiu-Jitsu lessons in João Pessoa, Brazil. Personalized, concept-driven BJJ coaching with an internationally experienced 2nd Degree Black Belt instructor. Starting at $80/hour.">
-  <meta name="keywords" content="private jiu jitsu João Pessoa, BJJ private lessons Brazil, jiu jitsu coach João Pessoa, private BJJ coaching, Brazilian Jiu-Jitsu lessons, martial arts João Pessoa">
+  <meta name="description" content="Awaken Lab — Sessões de estudo técnico, drill e refinamento de Jiu-Jitsu em João Pessoa, Brasil.">
+  <meta name="keywords" content="jiu jitsu drill João Pessoa, BJJ technical study, awaken lab, estudo técnico bjj, drill jiu jitsu">
   <meta name="author" content="Awaken BJJ">
   <meta name="robots" content="index, follow">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Awaken — Private Jiu-Jitsu Coaching | João Pessoa, Brazil">
-  <meta property="og:description" content="Artisanal, individualized Jiu-Jitsu training with a 2nd Degree Black Belt. Concept-driven, internationally proven coaching. Starting at $80/hour.">
+  <meta property="og:title" content="Awaken Lab — Estudo Técnico e Refinamento de Jiu-Jitsu">
+  <meta property="og:description" content="Sessões de drill, análise técnica e refinamento do BJJ. Estudo consciente e evolução técnica.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://awakenbjj.com">
+  <meta property="og:url" content="https://awakenbjj.com/lab">
   <meta property="og:image" content="assets/img/hero.png">
-  <meta property="og:locale" content="en_US">
-  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:locale:alternate" content="en_US">
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Awaken — Private Jiu-Jitsu Coaching">
-  <meta name="twitter:description" content="Artisanal, individualized Jiu-Jitsu training. Concept-driven coaching in João Pessoa, Brazil.">
-  <meta name="twitter:image" content="assets/img/hero.png">
-
-  <title>Awaken — Private Jiu-Jitsu Coaching | João Pessoa, Brazil</title>
+  <title>Awaken Lab — Estudo Técnico e Refinamento de Jiu-Jitsu</title>
 
   <!-- Favicon SVG -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23000'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='%23fff' font-family='Helvetica,Arial,sans-serif' font-weight='bold'%3EA%3C/text%3E%3C/svg%3E">
 
-  <!-- Fonts: Using a distinctive pairing per the skill guidelines -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -39,15 +33,15 @@
        ======================================== */
     :root {
       --color-primary: #C1C9D1;
-      --color-secondary: #34AADC;
-      --color-accent: #000000;
-      --color-bg: #FFFFFF;
+      --color-secondary: #0749a6;
+      --color-accent: #0749a6;
+      --color-bg: #0A0A0A;
       --color-bg-dark: #0A0A0A;
-      --color-bg-muted: #F5F5F5;
-      --color-text: #000000;
+      --color-bg-muted: #111111;
+      --color-text: #F5F5F5;
       --color-text-light: #FFFFFF;
-      --color-text-muted: #6B7280;
-      --color-border: #E5E7EB;
+      --color-text-muted: #A3A3A3;
+      --color-border: #262626;
 
       --font-display: 'Bebas Neue', Helvetica, Arial, sans-serif;
       --font-body: 'Barlow', Helvetica, Arial, sans-serif;
@@ -175,10 +169,10 @@
     }
 
     .btn-primary:hover {
-      background: var(--color-secondary);
-      border-color: var(--color-secondary);
+      background: #053b87;
+      border-color: #053b87;
       transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(52, 170, 220, 0.3);
+      box-shadow: 0 8px 25px rgba(7, 73, 166, 0.3);
     }
 
     .btn-outline {
@@ -190,18 +184,6 @@
     .btn-outline:hover {
       background: var(--color-text-light);
       color: var(--color-accent);
-      transform: translateY(-2px);
-    }
-
-    .btn-outline-dark {
-      background: transparent;
-      color: var(--color-accent);
-      border-color: var(--color-accent);
-    }
-
-    .btn-outline-dark:hover {
-      background: var(--color-accent);
-      color: var(--color-text-light);
       transform: translateY(-2px);
     }
 
@@ -236,7 +218,7 @@
     }
 
     .nav.scrolled {
-      background: rgba(0, 0, 0, 0.95);
+      background: rgba(10, 10, 10, 0.95);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       padding: 0.6rem 0;
@@ -302,7 +284,7 @@
 
     .lang-btn.active {
       background: var(--color-text-light);
-      color: var(--color-accent);
+      color: #000;
     }
 
     .mobile-menu-btn {
@@ -331,32 +313,6 @@
       align-items: flex-end;
       background: var(--color-bg-dark);
       overflow: hidden;
-    }
-
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-    }
-
-    .hero-bg img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.4;
-      filter: grayscale(30%);
-    }
-
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.95) 0%,
-        rgba(0, 0, 0, 0.5) 40%,
-        rgba(0, 0, 0, 0.3) 100%
-      );
-      z-index: 2;
     }
 
     .hero-content {
@@ -429,89 +385,7 @@
       50% { transform: translateX(-50%) translateY(-8px); }
     }
 
-    /* ========== ABOUT ========== */
-    .about {
-      background: var(--color-bg);
-      position: relative;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--space-3xl);
-      align-items: center;
-    }
-
-    .about-image-wrap {
-      position: relative;
-    }
-
-    .about-image-wrap img {
-      width: 100%;
-      aspect-ratio: 1/1;
-      object-fit: contain;
-    }
-
-    .about-image-label {
-      position: absolute;
-      bottom: var(--space-md);
-      left: var(--space-md);
-      background: var(--color-accent);
-      color: var(--color-text-light);
-      padding: 0.5rem 1.25rem;
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-    }
-
-    .about-eyebrow {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: var(--space-sm);
-    }
-
-    .about-eyebrow::before {
-      content: '';
-      width: 30px;
-      height: 2px;
-      background: var(--color-secondary);
-    }
-
-    .about-text {
-      margin-top: var(--space-md);
-    }
-
-    .about-text p {
-      margin-bottom: var(--space-sm);
-    }
-
-    .about-stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: var(--space-md);
-      margin-top: var(--space-xl);
-      padding-top: var(--space-xl);
-      border-top: 1px solid var(--color-border);
-    }
-
-    .stat-number {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 4vw, 3rem);
-      line-height: 1;
-      color: var(--color-accent);
-    }
-
-    .stat-label {
-      font-size: 0.75rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--color-text-muted);
-      margin-top: 0.25rem;
-    }
-
-    /* ========== METHOD ========== */
+    /* ========== METHOD (reused for lab sections) ========== */
     .method {
       background: var(--color-bg-dark);
       color: var(--color-text-light);
@@ -580,9 +454,9 @@
       font-weight: 300;
     }
 
-    /* ========== EXPERIENCE ========== */
+    /* ========== EXPERIENCE (reused for audience) ========== */
     .experience {
-      background: var(--color-bg);
+      background: var(--color-bg-muted);
       position: relative;
     }
 
@@ -623,155 +497,8 @@
       color: var(--color-text-muted);
       margin-bottom: var(--space-md);
       padding-bottom: var(--space-sm);
-      border-bottom: 2px solid var(--color-accent);
+      border-bottom: 2px solid var(--color-secondary);
       display: inline-block;
-    }
-
-    /* ========== WHO IT'S FOR ========== */
-    .audience {
-      background: var(--color-bg-muted);
-      position: relative;
-    }
-
-    .audience-header {
-      text-align: center;
-      margin-bottom: var(--space-3xl);
-    }
-
-    .audience-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: var(--space-md);
-    }
-
-    .audience-card {
-      background: var(--color-bg);
-      padding: var(--space-xl) var(--space-md);
-      border: 1px solid var(--color-border);
-      transition: all var(--transition);
-      text-align: center;
-    }
-
-    .audience-card:hover {
-      border-color: var(--color-accent);
-      transform: translateY(-4px);
-      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
-    }
-
-    .audience-icon {
-      width: 48px;
-      height: 48px;
-      margin: 0 auto var(--space-md);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--color-bg-dark);
-      color: var(--color-text-light);
-    }
-
-    .audience-icon svg {
-      width: 24px;
-      height: 24px;
-    }
-
-    .audience-card h3 {
-      font-family: var(--font-display);
-      font-size: 1.1rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 0.75rem;
-    }
-
-    .audience-card p {
-      font-size: 0.875rem;
-      color: var(--color-text-muted);
-      line-height: 1.5;
-    }
-
-    /* ========== PRICING ========== */
-    .pricing {
-      background: var(--color-bg);
-      position: relative;
-    }
-
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .pricing-info {
-      background: var(--color-bg-dark);
-      color: var(--color-text-light);
-      padding: var(--space-3xl) var(--space-xl);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .pricing-price {
-      font-family: var(--font-display);
-      font-size: clamp(3rem, 6vw, 5rem);
-      line-height: 1;
-      margin-bottom: var(--space-xs);
-    }
-
-    .pricing-price-sub {
-      font-size: 0.8rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.5);
-      margin-bottom: var(--space-xl);
-    }
-
-    .pricing-info p {
-      color: rgba(255, 255, 255, 0.7);
-      font-weight: 300;
-      line-height: 1.7;
-    }
-
-    .pricing-details {
-      background: var(--color-bg-muted);
-      padding: var(--space-3xl) var(--space-xl);
-    }
-
-    .pricing-details h3 {
-      font-family: var(--font-display);
-      font-size: 1.3rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin-bottom: var(--space-lg);
-    }
-
-    .pricing-feature {
-      display: flex;
-      align-items: flex-start;
-      gap: var(--space-sm);
-      padding: 0.75rem 0;
-      border-bottom: 1px solid var(--color-border);
-    }
-
-    .pricing-feature:last-child {
-      border-bottom: none;
-    }
-
-    .pricing-check {
-      flex-shrink: 0;
-      width: 20px;
-      height: 20px;
-      background: var(--color-accent);
-      color: var(--color-text-light);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.7rem;
-      margin-top: 2px;
-    }
-
-    .pricing-feature span {
-      font-size: 0.925rem;
     }
 
     /* ========== FINAL CTA ========== */
@@ -781,19 +508,6 @@
       text-align: center;
       position: relative;
       overflow: hidden;
-    }
-
-    .final-cta-bg {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-    }
-
-    .final-cta-bg img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.15;
     }
 
     .final-cta-content {
@@ -901,10 +615,6 @@
       content: '';
       flex: 1;
       height: 1px;
-      background: var(--color-border);
-    }
-
-    .section-divider-dark::after {
       background: rgba(255, 255, 255, 0.1);
     }
 
@@ -921,7 +631,7 @@
       position: fixed;
       inset: 0;
       z-index: 998;
-      background: rgba(0, 0, 0, 0.98);
+      background: rgba(10, 10, 10, 0.98);
       flex-direction: column;
       align-items: center;
       justify-content: center;
@@ -958,16 +668,6 @@
 
     /* ========== RESPONSIVE ========== */
     @media (max-width: 1024px) {
-      .about-grid {
-        grid-template-columns: 1fr;
-        gap: var(--space-xl);
-      }
-
-      .about-image-wrap {
-        max-height: 500px;
-        overflow: hidden;
-      }
-
       .method-grid {
         grid-template-columns: 1fr;
       }
@@ -975,14 +675,6 @@
       .exp-columns {
         grid-template-columns: 1fr;
         gap: var(--space-xl);
-      }
-
-      .audience-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .pricing-grid {
-        grid-template-columns: 1fr;
       }
     }
 
@@ -1021,66 +713,16 @@
         width: 100%;
       }
 
-      .audience-grid {
-        grid-template-columns: 1fr;
-      }
-
       .footer-inner {
         flex-direction: column;
         gap: var(--space-sm);
         text-align: center;
       }
 
-      .about-stats {
-        grid-template-columns: repeat(3, 1fr);
-        gap: var(--space-sm);
-      }
-
       .whatsapp-float {
         bottom: var(--space-md);
         right: var(--space-md);
       }
-    }
-  </style>
-  <style>
-    /* AWAKEN LAB DARK THEME OVERRIDES */
-    :root {
-      --color-bg: #0A0A0A;
-      --color-bg-muted: #111111;
-      --color-text: #F5F5F5;
-      --color-text-muted: #A3A3A3;
-      --color-border: #333333;
-      --color-secondary: #0749a6;
-    }
-    
-    .nav {
-      background: rgba(10,10,10,0.9);
-      border-bottom: 1px solid var(--color-border);
-    }
-    
-    .nav.scrolled {
-      background: rgba(10,10,10,0.95);
-    }
-    
-    .card {
-      background: #151515;
-      border: 1px solid var(--color-border);
-    }
-    
-    .card:hover {
-      border-color: var(--color-secondary);
-    }
-    
-    .btn-primary {
-      background: var(--color-secondary);
-      color: #fff;
-    }
-    .btn-primary:hover {
-      background: #053b87;
-    }
-
-    .mobile-nav {
-      background: var(--color-bg);
     }
   </style>
 </head>
@@ -1094,26 +736,26 @@
 
       <!-- Desktop Navigation -->
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html#about" class="nav-link" data-i18n="nav_about">About</a></li>
-        <li><a href="index.html#method" class="nav-link" data-i18n="nav_method">Method</a></li>
-        <li><a href="index.html#experience" class="nav-link" data-i18n="nav_experience">Experience</a></li>
-        <li><a href="index.html#pricing" class="nav-link" data-i18n="nav_pricing">Pricing</a></li>
-        <li><a href="#" class="nav-link" style="color: var(--color-secondary); font-weight: 700;">AWAKEN LAB</a></li>
+        <li><a href="index.html#about" class="nav-link" data-i18n="nav_about">Sobre</a></li>
+        <li><a href="index.html#method" class="nav-link" data-i18n="nav_method">Método</a></li>
+        <li><a href="index.html#experience" class="nav-link" data-i18n="nav_experience">Experiência</a></li>
+        <li><a href="index.html#pricing" class="nav-link" data-i18n="nav_pricing">Valores</a></li>
+        <li><a href="lab.html" class="nav-link">AWAKEN LAB</a></li>
         <li>
           <div class="lang-toggle" id="langToggleDesktop" role="group" aria-label="Language selector">
-            <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
-            <button class="lang-btn" data-lang="pt" aria-pressed="false">PT</button>
+            <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+            <button class="lang-btn active" data-lang="pt" aria-pressed="true">PT</button>
           </div>
         </li>
         <li>
-          <a href="https://wa.me/5583999619497" target="_blank" rel="noopener" class="btn btn-primary" style="padding: 0.65rem 1.5rem; font-size: 0.75rem;" data-i18n="nav_cta">Book Now</a>
+          <a href="https://wa.me/5583999619497" target="_blank" rel="noopener" class="btn btn-primary" style="padding: 0.65rem 1.5rem; font-size: 0.75rem;" data-i18n="nav_cta">Agende Agora</a>
         </li>
       </ul>
 
       <!-- Mobile Language Toggle -->
       <div class="lang-toggle lang-toggle-mobile" id="langToggleMobile" role="group" aria-label="Language selector" style="display: none;">
-        <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
-        <button class="lang-btn" data-lang="pt" aria-pressed="false">PT</button>
+        <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        <button class="lang-btn active" data-lang="pt" aria-pressed="true">PT</button>
       </div>
 
       <!-- Mobile Menu Button -->
@@ -1128,109 +770,132 @@
   <!-- Mobile Navigation Overlay -->
   <div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Mobile navigation">
     <button class="mobile-close" id="mobileClose" aria-label="Close menu">&times;</button>
-    <a href="index.html#about" data-i18n="nav_about" onclick="closeMobileNav()">About</a>
-    <a href="index.html#method" data-i18n="nav_method" onclick="closeMobileNav()">Method</a>
-    <a href="index.html#experience" data-i18n="nav_experience" onclick="closeMobileNav()">Experience</a>
-    <a href="index.html#pricing" data-i18n="nav_pricing" onclick="closeMobileNav()">Pricing</a>
-    <a href="#" onclick="closeMobileNav()" style="color: var(--color-secondary); font-weight: 700;">AWAKEN LAB</a>
-    <a href="https://wa.me/5583999619497" target="_blank" rel="noopener" class="btn btn-whatsapp" data-i18n="nav_cta" onclick="closeMobileNav()">Book Now</a>
+    <a href="index.html#about" data-i18n="nav_about" onclick="closeMobileNav()">Sobre</a>
+    <a href="index.html#method" data-i18n="nav_method" onclick="closeMobileNav()">Método</a>
+    <a href="index.html#experience" data-i18n="nav_experience" onclick="closeMobileNav()">Experiência</a>
+    <a href="index.html#pricing" data-i18n="nav_pricing" onclick="closeMobileNav()">Valores</a>
+    <a href="lab.html" onclick="closeMobileNav()">AWAKEN LAB</a>
+    <a href="https://wa.me/5583999619497" target="_blank" rel="noopener" class="btn btn-whatsapp" data-i18n="nav_cta" onclick="closeMobileNav()">Agende Agora</a>
   </div>
 
 
   <!-- ============================
        HERO SECTION
        ============================ -->
-  <!-- ============================
-       HERO SECTION - LAB
-       ============================ -->
   <header class="hero" id="hero">
-    <div class="container hero-inner">
-      <div class="hero-content">
-        <span class="eyebrow" data-i18n="lab_hero_eyebrow">Jiu-Jitsu Technical Study Sessions</span>
-        <h1 class="heading-display hero-title" data-i18n="lab_hero_title">Technique<br>conquers all</h1>
-        <p class="text-body text-light hero-subtitle" data-i18n="lab_hero_subtitle">Sessões de drill, análise técnica e refinamento do BJJ.</p>
+    <div class="container hero-content">
+      <div class="hero-eyebrow">
+        <span class="text-sm text-light tracking-wider uppercase font-medium" data-i18n="lab_hero_eyebrow">Jiu-Jitsu Technical Study Sessions</span>
+      </div>
 
-        <div class="hero-cta-group">
-          <a href="https://wa.me/5583999619497" target="_blank" rel="noopener" class="btn btn-primary" id="heroCta">
-            <span data-i18n="lab_cta_primary">Entrar no grupo</span>
-          </a>
-          <a href="#concept" class="btn btn-secondary" data-i18n="lab_cta_secondary">Ver formato</a>
-        </div>
+      <h1 class="heading-display heading-xl text-light hero-title" data-i18n="lab_hero_title">Technique<br>conquers all</h1>
+
+      <p class="text-body text-light hero-subtitle" data-i18n="lab_hero_subtitle">Sessões de drill, análise técnica e refinamento do BJJ.</p>
+
+      <div class="hero-cta-group">
+        <a href="https://wa.me/5583999619497" target="_blank" rel="noopener" class="btn btn-primary" id="heroCta">
+          <svg class="whatsapp-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span data-i18n="lab_cta_primary">Entrar no grupo</span>
+        </a>
+        <a href="#concept" class="btn btn-outline" data-i18n="lab_cta_secondary">Ver formato</a>
       </div>
     </div>
-    
+
     <div class="hero-scroll-indicator" aria-hidden="true">
-      <span class="scroll-text" data-i18n="hero_scroll">Scroll</span>
+      <span data-i18n="hero_scroll">Scroll</span>
       <div class="scroll-line"></div>
     </div>
   </header>
 
+
   <!-- ============================
-       CONCEPT SECTION
+       CONCEITO
        ============================ -->
-  <section class="section" id="concept">
+  <section class="method section-padding" id="concept" aria-labelledby="conceptHeading">
+    <div class="method-bg-text" aria-hidden="true">DRILL</div>
+
     <div class="container">
-      <div class="section-header text-center fade-up">
-        <span class="eyebrow" data-i18n="lab_concept_eyebrow">O Conceito</span>
-        <h2 class="heading-display heading-lg" data-i18n="lab_concept_title">Estudo e Refinamento</h2>
-        <p class="text-body text-light" style="max-width: 600px; margin: 0 auto;" data-i18n="lab_concept_desc">Treinos focados em drill, estudo técnico e refinamento de movimento no Jiu-Jitsu. O objetivo não é sparring livre, mas estudo, repetição consciente e evolução técnica.</p>
+      <div class="method-header reveal">
+        <div class="section-divider" style="justify-content: center;">
+          <span class="section-number">01</span>
+        </div>
+        <span class="text-xs uppercase tracking-wider font-semibold text-muted" data-i18n="lab_concept_eyebrow">O Conceito</span>
+        <h2 id="conceptHeading" class="heading-display heading-lg" style="margin-top: var(--space-sm);" data-i18n="lab_concept_title">Estudo e Refinamento</h2>
+      </div>
+
+      <div class="final-cta-content reveal reveal-delay-1" style="text-align: center;">
+        <p class="text-body" style="max-width: 650px; margin: 0 auto; opacity: 0.7; font-weight: 300;" data-i18n="lab_concept_desc">Treinos focados em drill, estudo técnico e refinamento de movimento no Jiu-Jitsu. O objetivo não é sparring livre, mas estudo, repetição consciente e evolução técnica.</p>
       </div>
     </div>
   </section>
 
+
   <!-- ============================
-       HOW IT WORKS
+       COMO FUNCIONA
        ============================ -->
-  <section class="section bg-muted" id="how-it-works">
+  <section class="method section-padding" id="how-it-works" aria-labelledby="howHeading" style="background: var(--color-bg-muted);">
     <div class="container">
-      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-lg);">
-        <div class="card fade-up">
-          <h3 class="heading-display heading-md" data-i18n="lab_hw_1_title">1. Luta Referência</h3>
-          <p class="text-body text-muted" data-i18n="lab_hw_1_desc">Cada encontro parte da análise de uma luta referência para entender o timing, a alavanca e a aplicação em alto nível.</p>
+      <div class="method-header reveal">
+        <div class="section-divider" style="justify-content: center;">
+          <span class="section-number">02</span>
         </div>
-        <div class="card fade-up" style="transition-delay: 100ms;">
-          <h3 class="heading-display heading-md" data-i18n="lab_hw_2_title">2. Drill Específico</h3>
-          <p class="text-body text-muted" data-i18n="lab_hw_2_desc">Repetição isolada do movimento. Construção da memória muscular e precisão biomecânica sem a resistência de um combate real.</p>
+        <span class="text-xs uppercase tracking-wider font-semibold text-muted" data-i18n="lab_hw_eyebrow">Como Funciona</span>
+        <h2 id="howHeading" class="heading-display heading-lg" style="margin-top: var(--space-sm);" data-i18n="lab_hw_title">Formato da Sessão</h2>
+      </div>
+
+      <div class="method-grid">
+        <div class="method-card reveal">
+          <div class="method-card-number">01</div>
+          <h3 class="method-card-title" data-i18n="lab_hw_1_title">Luta Referência</h3>
+          <p class="text-body" data-i18n="lab_hw_1_desc">Cada encontro parte da análise de uma luta referência para entender o timing, a alavanca e a aplicação em alto nível.</p>
         </div>
-        <div class="card fade-up" style="transition-delay: 200ms;">
-          <h3 class="heading-display heading-md" data-i18n="lab_hw_3_title">3. Foco Técnico</h3>
-          <p class="text-body text-muted" data-i18n="lab_hw_3_desc">Aplicação com resistência progressiva. Resolução de problemas nas posições e detalhamento refinado das mecânicas ocultas.</p>
+        <div class="method-card reveal reveal-delay-1">
+          <div class="method-card-number">02</div>
+          <h3 class="method-card-title" data-i18n="lab_hw_2_title">Drill Específico</h3>
+          <p class="text-body" data-i18n="lab_hw_2_desc">Repetição isolada do movimento. Construção da memória muscular e precisão biomecânica sem a resistência de um combate real.</p>
+        </div>
+        <div class="method-card reveal reveal-delay-2">
+          <div class="method-card-number">03</div>
+          <h3 class="method-card-title" data-i18n="lab_hw_3_title">Foco Técnico</h3>
+          <p class="text-body" data-i18n="lab_hw_3_desc">Aplicação com resistência progressiva. Resolução de problemas nas posições e detalhamento refinado das mecânicas ocultas.</p>
+        </div>
+        <div class="method-card reveal reveal-delay-3">
+          <div class="method-card-number">04</div>
+          <h3 class="method-card-title" data-i18n="lab_hw_4_title">Drill Livre</h3>
+          <p class="text-body" data-i18n="lab_hw_4_desc">Tempo dedicado para você e seu parceiro trabalharem posições específicas, tirarem dúvidas e polirem o jogo com supervisão técnica.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============================
-       FREE DRILL
-       ============================ -->
-  <section class="section" id="free-drill">
-    <div class="container">
-      <div class="card" style="display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 800px; margin: 0 auto;">
-        <span class="eyebrow" data-i18n="lab_drill_eyebrow">Prática Autônoma</span>
-        <h2 class="heading-display heading-lg" data-i18n="lab_drill_title">Drill Livre</h2>
-        <p class="text-body text-muted" data-i18n="lab_drill_desc">Tempo dedicado para você e seu parceiro trabalharem posições específicas, tirarem dúvidas e polirem o jogo com supervisão técnica, sem pressão de rendimento.</p>
-      </div>
-    </div>
-  </section>
 
   <!-- ============================
-       AUDIENCE
+       PARA QUEM É / O QUE NÃO É
        ============================ -->
-  <section class="section bg-muted" id="audience">
+  <section class="experience section-padding" id="audience" aria-labelledby="audienceHeading">
     <div class="container">
-      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-lg);">
-        <div class="card fade-up" style="border-left: 4px solid var(--color-secondary);">
-          <h3 class="heading-display heading-md" data-i18n="lab_for_title">Para quem é</h3>
-          <ul class="text-body text-muted" style="list-style-type: disc; margin-left: var(--space-sm);">
+      <div class="exp-header reveal">
+        <div class="section-divider">
+          <span class="section-number">03</span>
+        </div>
+        <span class="text-xs uppercase tracking-wider font-semibold text-muted" data-i18n="lab_audience_eyebrow">Público</span>
+        <h2 id="audienceHeading" class="heading-display heading-lg" style="margin-top: var(--space-sm);" data-i18n="lab_audience_title">Para quem é</h2>
+      </div>
+
+      <div class="exp-columns">
+        <div class="reveal">
+          <h3 class="exp-column-title" data-i18n="lab_for_title">Para quem é</h3>
+          <ul class="exp-list text-body">
             <li data-i18n="lab_for_1">Quem quer entender a biomecânica das posições.</li>
             <li data-i18n="lab_for_2">Atletas buscando refinar movimentos antes da exaustão.</li>
             <li data-i18n="lab_for_3">Praticantes que valorizam a repetição inteligente.</li>
           </ul>
         </div>
-        <div class="card fade-up" style="border-left: 4px solid #cc0000; transition-delay: 100ms;">
-          <h3 class="heading-display heading-md" data-i18n="lab_not_title">O que não é</h3>
-          <ul class="text-body text-muted" style="list-style-type: disc; margin-left: var(--space-sm);">
-            <li data-i18n="lab_not_1">Não é dia de 'porradaria' ou sparring de alta intensidade.</li>
+
+        <div class="reveal reveal-delay-2">
+          <h3 class="exp-column-title" data-i18n="lab_not_title">O que não é</h3>
+          <ul class="exp-list text-body">
+            <li data-i18n="lab_not_1">Não é dia de "porradaria" ou sparring de alta intensidade.</li>
             <li data-i18n="lab_not_2">Não é para quem busca apenas suar sem pensar.</li>
             <li data-i18n="lab_not_3">Não é uma aula convencional com dezenas de posições.</li>
           </ul>
@@ -1239,42 +904,56 @@
     </div>
   </section>
 
+
   <!-- ============================
-       LOCATIONS & STRUCTURE
+       LOCAIS E ESTRUTURA
        ============================ -->
-  <section class="section" id="locations">
+  <section class="method section-padding" id="locations" aria-labelledby="locationsHeading">
     <div class="container">
-      <div class="section-header text-center fade-up">
-        <h2 class="heading-display heading-lg" data-i18n="lab_locations_title">Locais e Estrutura</h2>
-      </div>
-      <div class="grid" style="grid-template-columns: 1fr; max-width: 600px; margin: 0 auto;">
-        <div class="card fade-up text-center">
-          <h3 class="heading-display heading-md">João Pessoa, PB</h3>
-          <p class="text-body text-muted" data-i18n="lab_locations_desc">A definir. O formato será itinerante ou em local fixo selecionado para garantir a melhor experiência de aprendizado.</p>
+      <div class="method-header reveal">
+        <div class="section-divider" style="justify-content: center;">
+          <span class="section-number">04</span>
         </div>
+        <span class="text-xs uppercase tracking-wider font-semibold text-muted" data-i18n="lab_locations_eyebrow">Estrutura</span>
+        <h2 id="locationsHeading" class="heading-display heading-lg" style="margin-top: var(--space-sm);" data-i18n="lab_locations_title">Locais e Estrutura</h2>
+      </div>
+
+      <div class="final-cta-content reveal reveal-delay-1" style="text-align: center;">
+        <p class="text-body" style="max-width: 550px; margin: 0 auto; opacity: 0.7; font-weight: 300;" data-i18n="lab_locations_desc">João Pessoa, PB. O formato será itinerante ou em local fixo selecionado para garantir a melhor experiência de aprendizado.</p>
       </div>
     </div>
   </section>
+
 
   <!-- ============================
        FINAL CTA
        ============================ -->
-  <section class="section bg-muted" id="cta" style="border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
-    <div class="container" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-      <span class="eyebrow" data-i18n="lab_cta_final_eyebrow">Faça parte</span>
-      <h2 class="heading-display heading-xl" data-i18n="lab_cta_final_title">Evolução<br>Consciente</h2>
-      <p class="text-body text-light" style="max-width: 500px; margin-bottom: var(--space-lg);" data-i18n="lab_cta_final_desc">Junte-se ao grupo focado no refinamento técnico e leve seu Jiu-Jitsu para o próximo nível.</p>
+  <section class="final-cta section-padding" id="contact" aria-labelledby="ctaHeading">
+    <div class="container final-cta-content reveal">
+      <div class="section-divider" style="justify-content: center;">
+        <span class="section-number">05</span>
+      </div>
+      <span class="text-xs uppercase tracking-wider font-semibold text-muted" data-i18n="lab_cta_final_eyebrow">Faça parte</span>
+      <h2 id="ctaHeading" class="heading-display heading-lg text-light" style="margin-top: var(--space-sm);" data-i18n="lab_cta_final_title">Evolução<br>Consciente</h2>
+      <p class="text-body text-light" data-i18n="lab_cta_final_desc">Junte-se ao grupo focado no refinamento técnico e leve seu Jiu-Jitsu para o próximo nível.</p>
 
-      <a href="https://wa.me/5583999619497" target="_blank" rel="noopener" class="btn btn-whatsapp" id="finalCta">
-        <svg class="whatsapp-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        <span data-i18n="lab_cta_btn">Falar no WhatsApp</span>
-      </a>
+      <div style="display: flex; justify-content: center; gap: var(--space-sm); flex-wrap: wrap;">
+        <a href="https://wa.me/5583999619497" target="_blank" rel="noopener" class="btn btn-whatsapp" id="finalCta">
+          <svg class="whatsapp-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span data-i18n="lab_cta_btn">Falar no WhatsApp</span>
+        </a>
+      </div>
     </div>
   </section>
-\n  <footer class="footer" role="contentinfo">
+
+
+  <!-- ============================
+       FOOTER
+       ============================ -->
+  <footer class="footer" role="contentinfo">
     <div class="container footer-inner">
       <span class="footer-logo">Awaken</span>
-      <p data-i18n="footer_text">© 2026 Awaken BJJ. João Pessoa, Paraíba, Brazil.</p>
+      <p data-i18n="footer_text">© 2026 Awaken BJJ. João Pessoa, Paraíba, Brasil.</p>
     </div>
   </footer>
 
@@ -1288,120 +967,44 @@
 
 
   <!-- ============================
-       JAVASCRIPT — Language Toggle & Interactions
+       JAVASCRIPT
        ============================ -->
   <script>
     // =============================================
-    // BILINGUAL CONTENT — EN / PT-BR
+    // TRANSLATIONS
     // =============================================
     const translations = {
       en: {
-        // Nav
         nav_about: 'About',
         nav_method: 'Method',
         nav_experience: 'Experience',
         nav_pricing: 'Pricing',
         nav_cta: 'Book Now',
-
-        // Hero
-        hero_eyebrow: 'Private Jiu-Jitsu Coaching — João Pessoa, Brazil',
-        hero_title: 'Train With<br>Intention',
-        hero_subtitle: 'Artisanal, individualized Brazilian Jiu-Jitsu training with a 2nd Degree Black Belt. Concept-driven coaching built for your evolution.',
-        hero_cta_primary: 'Schedule Your Session',
-        hero_cta_secondary: 'Learn More',
         hero_scroll: 'Scroll',
 
-        // About
-        about_label: '2nd Degree Black Belt',
-        about_eyebrow: 'Instructor Profile',
-        about_title: 'Discipline.<br>Precision.<br>Evolution.',
-        about_p1: 'With a 2nd Degree Black Belt in Brazilian Jiu-Jitsu and a Red and White Prajied in Muay Thai, the founder of Awaken brings over a decade of teaching and competitive experience to every session.',
-        about_p2: 'From training adults at Cascão BJJ since 2015 to developing children\'s programs at Roberto BJJ Kids, every lesson is shaped by real-world application, international exposure, and deep pedagogical care.',
-        stat_years: 'Years Teaching',
-        stat_countries: 'Countries',
-        stat_belt: 'Black Belt',
-
-        // Method
-        method_eyebrow: 'Teaching Philosophy',
-        method_title: 'Concept Over<br>Repetition',
-        method_1_title: 'Concept-Driven Learning',
-        method_1_desc: 'Understanding the \'why\' behind every technique. Each movement is taught as part of an interconnected system, not an isolated sequence.',
-        method_2_title: 'Pattern Recognition',
-        method_2_desc: 'Training your mind to read positions and anticipate transitions. Building intuitive decision-making that transcends memorization.',
-        method_3_title: 'High-Percentage Techniques',
-        method_3_desc: 'Only proven, battle-tested techniques refined through years of competition and teaching. No filler — every minute of training has purpose.',
-        method_4_title: 'Adaptive Instruction',
-        method_4_desc: 'Creative, personalized coaching that adapts to your body type, learning style, and goals. Your journey is unique — your training should be too.',
-
-        // Experience
-        exp_eyebrow: 'Credentials',
-        exp_title: 'Proven on the<br>Mat & Beyond',
-        exp_col1_title: 'Competition & Titles',
-        exp_col2_title: 'International & Certifications',
-        exp_t1: 'Pan-American Champion',
-        exp_t2: 'Brazilian National Champion',
-        exp_t3: 'Paraibano Champion',
-        exp_t4: 'North-Northeast Champion',
-        exp_t5: '2nd Degree Black Belt in BJJ',
-        exp_t6: 'Red and White Prajied — Muay Thai',
-        exp_i1: 'Seminars in USA: Nevada, Washington, Massachusetts',
-        exp_i2: 'Instructor at Gracie Stockholm, Sweden',
-        exp_i3: 'First Aid, CPR & Trauma Training certified',
-        exp_i4: 'Instructor — Women\'s Self-Defense Workshop (Federal Prosecutor\'s Office, 2026)',
-        exp_i5: 'Founder: Awaken brand — events, seminars & book',
-        exp_i6: 'Fluent in Portuguese & English',
-
-        // Audience
-        audience_eyebrow: 'Who It\'s For',
-        audience_title: 'Built For You',
-        aud_1_title: 'Beginners',
-        aud_1_desc: 'Start your journey with a structured, safe, and personalized introduction to Jiu-Jitsu fundamentals.',
-        aud_2_title: 'Advanced Athletes',
-        aud_2_desc: 'Sharpen your game with competition-level coaching, advanced concepts, and strategic sparring analysis.',
-        aud_3_title: 'Children & Neurodivergent',
-        aud_3_desc: 'Specialized experience with ASD, ADHD, and ODD students. Patient, adaptive, structured coaching for young practitioners.',
-        aud_4_title: 'Travelers',
-        aud_4_desc: 'English-speaking visitors in Brazil — train authentic BJJ with a bilingual instructor who understands cross-cultural coaching.',
-
-        // Pricing
-        pricing_eyebrow: 'Investment',
-        pricing_title: 'Private Sessions',
-        pricing_starting: 'Starting at',
-        pricing_per: 'Per Hour — Private Session',
-        pricing_desc: 'Each session is fully personalized to your level, goals, and learning pace. No group dynamics, no wasted time — pure, focused evolution on the mat.',
-        pricing_cta: 'Get Pricing Details',
-        pricing_includes: 'What\'s Included',
-        pricing_f1: 'Fully personalized lesson plan tailored to your goals',
-        pricing_f2: 'Concept-based instruction with position-by-position breakdown',
-        pricing_f3: 'Video analysis and homework between sessions',
-        pricing_f4: 'Flexible scheduling — train at your pace',
-        pricing_f5: 'Bilingual instruction (English & Portuguese)',
-        pricing_f6: 'First Aid & CPR certified instructor',
-
-        // CTA
-        cta_eyebrow: 'Ready to Begin?',
-        cta_title: 'Your Evolution<br>Starts Now',
-        cta_desc: 'One conversation is all it takes. Reach out on WhatsApp, and let\'s design a training path built exclusively for you.',
-        cta_btn: 'Book via WhatsApp',
-
-        // Lab Page
         lab_hero_eyebrow: 'Jiu-Jitsu Technical Study Sessions',
         lab_hero_title: 'Technique<br>conquers all',
         lab_hero_subtitle: 'Drill sessions, technical analysis, and BJJ refinement.',
         lab_cta_primary: 'Join the Group',
         lab_cta_secondary: 'View Format',
+
         lab_concept_eyebrow: 'The Concept',
         lab_concept_title: 'Study and Refinement',
         lab_concept_desc: 'Training focused on drilling, technical study, and movement refinement in Jiu-Jitsu. The goal is not free sparring, but study, conscious repetition, and technical evolution.',
-        lab_hw_1_title: '1. Reference Match',
-        lab_hw_1_desc: 'Each meeting starts with the analysis of a reference match to understand the timing, leverage, and application at a high level.',
-        lab_hw_2_title: '2. Specific Drill',
+
+        lab_hw_eyebrow: 'How It Works',
+        lab_hw_title: 'Session Format',
+        lab_hw_1_title: 'Reference Match',
+        lab_hw_1_desc: 'Each meeting starts with the analysis of a reference match to understand timing, leverage, and high-level application.',
+        lab_hw_2_title: 'Specific Drill',
         lab_hw_2_desc: 'Isolated repetition of the movement. Building muscle memory and biomechanical precision without the resistance of real combat.',
-        lab_hw_3_title: '3. Technical Focus',
+        lab_hw_3_title: 'Technical Focus',
         lab_hw_3_desc: 'Application with progressive resistance. Problem-solving in positions and detailed refinement of hidden mechanics.',
-        lab_drill_eyebrow: 'Autonomous Practice',
-        lab_drill_title: 'Free Drill',
-        lab_drill_desc: 'Dedicated time for you and your partner to work on specific positions, ask questions, and polish your game with technical supervision, without performance pressure.',
+        lab_hw_4_title: 'Free Drill',
+        lab_hw_4_desc: 'Dedicated time for you and your partner to work on specific positions, ask questions, and polish your game with technical supervision.',
+
+        lab_audience_eyebrow: 'Audience',
+        lab_audience_title: 'Who it is for',
         lab_for_title: 'Who it is for',
         lab_for_1: 'Those who want to understand the biomechanics of positions.',
         lab_for_2: 'Athletes looking to refine movements before exhaustion.',
@@ -1410,124 +1013,50 @@
         lab_not_1: 'It is not a day for hard sparring or high-intensity rolls.',
         lab_not_2: 'It is not for those who just want to sweat without thinking.',
         lab_not_3: 'It is not a conventional class with dozens of positions.',
+
+        lab_locations_eyebrow: 'Structure',
         lab_locations_title: 'Locations and Structure',
-        lab_locations_desc: 'To be defined. The format will be itinerant or in a fixed location selected to ensure the best learning experience.',
+        lab_locations_desc: 'João Pessoa, PB. The format will be itinerant or in a fixed location selected to ensure the best learning experience.',
+
         lab_cta_final_eyebrow: 'Be Part of It',
         lab_cta_final_title: 'Conscious<br>Evolution',
         lab_cta_final_desc: 'Join the group focused on technical refinement and take your Jiu-Jitsu to the next level.',
         lab_cta_btn: 'Contact via WhatsApp',
 
-        // Footer
         footer_text: '© 2026 Awaken BJJ. João Pessoa, Paraíba, Brazil.'
       },
 
       pt: {
-        // Nav
         nav_about: 'Sobre',
         nav_method: 'Método',
         nav_experience: 'Experiência',
         nav_pricing: 'Valores',
         nav_cta: 'Agende Agora',
-
-        // Hero
-        hero_eyebrow: 'Aulas Particulares de Jiu-Jitsu — João Pessoa, Brasil',
-        hero_title: 'Treine Com<br>Intenção',
-        hero_subtitle: 'Treinamento artesanal e individualizado de Jiu-Jitsu Brasileiro com Faixa Preta 2º Grau. Ensino baseado em conceitos, construído para sua evolução.',
-        hero_cta_primary: 'Agende Sua Sessão',
-        hero_cta_secondary: 'Saiba Mais',
         hero_scroll: 'Rolar',
 
-        // About
-        about_label: 'Faixa Preta 2º Grau',
-        about_eyebrow: 'Perfil do Instrutor',
-        about_title: 'Disciplina.<br>Precisão.<br>Evolução.',
-        about_p1: 'Com Faixa Preta 2º Grau em Jiu-Jitsu Brasileiro e Prajied Vermelha e Branca em Muay Thai, o fundador do Awaken traz mais de uma década de experiência em ensino e competição para cada sessão.',
-        about_p2: 'Desde o treinamento de adultos no Cascão BJJ em 2015 até o desenvolvimento de programas infantis no Roberto BJJ Kids, cada aula é moldada pela aplicação prática, exposição internacional e profundo cuidado pedagógico.',
-        stat_years: 'Anos Ensinando',
-        stat_countries: 'Países',
-        stat_belt: 'Faixa Preta',
-
-        // Method
-        method_eyebrow: 'Filosofia de Ensino',
-        method_title: 'Conceito Acima<br>da Repetição',
-        method_1_title: 'Aprendizado Baseado em Conceitos',
-        method_1_desc: 'Entender o "porquê" de cada técnica. Cada movimento é ensinado como parte de um sistema interconectado, não uma sequência isolada.',
-        method_2_title: 'Reconhecimento de Padrões',
-        method_2_desc: 'Treinar sua mente para ler posições e antecipar transições. Construir tomada de decisão intuitiva que transcende a memorização.',
-        method_3_title: 'Técnicas de Alta Porcentagem',
-        method_3_desc: 'Apenas técnicas comprovadas e testadas em combate, refinadas por anos de competição e ensino. Sem enrolação — cada minuto de treino tem propósito.',
-        method_4_title: 'Instrução Adaptativa',
-        method_4_desc: 'Coaching criativo e personalizado que se adapta ao seu biotipo, estilo de aprendizagem e objetivos. Sua jornada é única — seu treinamento também deve ser.',
-
-        // Experience
-        exp_eyebrow: 'Credenciais',
-        exp_title: 'Comprovado no<br>Tatame e Além',
-        exp_col1_title: 'Competição & Títulos',
-        exp_col2_title: 'Internacional & Certificações',
-        exp_t1: 'Campeão Pan-Americano',
-        exp_t2: 'Campeão Brasileiro',
-        exp_t3: 'Campeão Paraibano',
-        exp_t4: 'Campeão Norte-Nordeste',
-        exp_t5: 'Faixa Preta 2º Grau em BJJ',
-        exp_t6: 'Prajied Vermelha e Branca — Muay Thai',
-        exp_i1: 'Seminários nos EUA: Nevada, Washington, Massachusetts',
-        exp_i2: 'Instrutor no Gracie Stockholm, Suécia',
-        exp_i3: 'Certificado em Primeiros Socorros, RCP e Trauma',
-        exp_i4: 'Instrutor — Workshop de Defesa Pessoal Feminina (Ministério Público Federal, 2026)',
-        exp_i5: 'Fundador: marca Awaken — eventos, seminários e livro',
-        exp_i6: 'Fluente em Português e Inglês',
-
-        // Audience
-        audience_eyebrow: 'Para Quem É',
-        audience_title: 'Feito Para Você',
-        aud_1_title: 'Iniciantes',
-        aud_1_desc: 'Comece sua jornada com uma introdução estruturada, segura e personalizada aos fundamentos do Jiu-Jitsu.',
-        aud_2_title: 'Atletas Avançados',
-        aud_2_desc: 'Aprimore seu jogo com coaching de nível competitivo, conceitos avançados e análise estratégica de sparring.',
-        aud_3_title: 'Crianças & Neurodivergentes',
-        aud_3_desc: 'Experiência especializada com alunos TEA, TDAH e TOD. Coaching paciente, adaptativo e estruturado para jovens praticantes.',
-        aud_4_title: 'Viajantes',
-        aud_4_desc: 'Visitantes que falam inglês no Brasil — treine BJJ autêntico com um instrutor bilíngue que entende o coaching intercultural.',
-
-        // Pricing
-        pricing_eyebrow: 'Investimento',
-        pricing_title: 'Sessões Particulares',
-        pricing_starting: 'A partir de',
-        pricing_per: 'Por Hora — Sessão Particular',
-        pricing_desc: 'Cada sessão é totalmente personalizada para seu nível, objetivos e ritmo de aprendizado. Sem dinâmica de grupo, sem tempo perdido — evolução pura e focada no tatame.',
-        pricing_cta: 'Consultar Valores',
-        pricing_includes: 'O Que Está Incluso',
-        pricing_f1: 'Plano de aula totalmente personalizado para seus objetivos',
-        pricing_f2: 'Instrução baseada em conceitos com análise posição por posição',
-        pricing_f3: 'Análise de vídeo e tarefas entre sessões',
-        pricing_f4: 'Agenda flexível — treine no seu ritmo',
-        pricing_f5: 'Instrução bilíngue (Inglês e Português)',
-        pricing_f6: 'Instrutor certificado em Primeiros Socorros e RCP',
-
-        // CTA
-        cta_eyebrow: 'Pronto para Começar?',
-        cta_title: 'Sua Evolução<br>Começa Agora',
-        cta_desc: 'Uma conversa é tudo o que é preciso. Entre em contato pelo WhatsApp e vamos desenhar um caminho de treinamento feito exclusivamente para você.',
-        cta_btn: 'Agende pelo WhatsApp',
-
-        // Lab Page
         lab_hero_eyebrow: 'Jiu-Jitsu Technical Study Sessions',
         lab_hero_title: 'Technique<br>conquers all',
         lab_hero_subtitle: 'Sessões de drill, análise técnica e refinamento do BJJ.',
         lab_cta_primary: 'Entrar no grupo',
         lab_cta_secondary: 'Ver formato',
+
         lab_concept_eyebrow: 'O Conceito',
         lab_concept_title: 'Estudo e Refinamento',
         lab_concept_desc: 'Treinos focados em drill, estudo técnico e refinamento de movimento no Jiu-Jitsu. O objetivo não é sparring livre, mas estudo, repetição consciente e evolução técnica.',
-        lab_hw_1_title: '1. Luta Referência',
+
+        lab_hw_eyebrow: 'Como Funciona',
+        lab_hw_title: 'Formato da Sessão',
+        lab_hw_1_title: 'Luta Referência',
         lab_hw_1_desc: 'Cada encontro parte da análise de uma luta referência para entender o timing, a alavanca e a aplicação em alto nível.',
-        lab_hw_2_title: '2. Drill Específico',
+        lab_hw_2_title: 'Drill Específico',
         lab_hw_2_desc: 'Repetição isolada do movimento. Construção da memória muscular e precisão biomecânica sem a resistência de um combate real.',
-        lab_hw_3_title: '3. Foco Técnico',
+        lab_hw_3_title: 'Foco Técnico',
         lab_hw_3_desc: 'Aplicação com resistência progressiva. Resolução de problemas nas posições e detalhamento refinado das mecânicas ocultas.',
-        lab_drill_eyebrow: 'Prática Autônoma',
-        lab_drill_title: 'Drill Livre',
-        lab_drill_desc: 'Tempo dedicado para você e seu parceiro trabalharem posições específicas, tirarem dúvidas e polirem o jogo com supervisão técnica, sem pressão de rendimento.',
+        lab_hw_4_title: 'Drill Livre',
+        lab_hw_4_desc: 'Tempo dedicado para você e seu parceiro trabalharem posições específicas, tirarem dúvidas e polirem o jogo com supervisão técnica.',
+
+        lab_audience_eyebrow: 'Público',
+        lab_audience_title: 'Para quem é',
         lab_for_title: 'Para quem é',
         lab_for_1: 'Quem quer entender a biomecânica das posições.',
         lab_for_2: 'Atletas buscando refinar movimentos antes da exaustão.',
@@ -1536,14 +1065,16 @@
         lab_not_1: 'Não é dia de "porradaria" ou sparring de alta intensidade.',
         lab_not_2: 'Não é para quem busca apenas suar sem pensar.',
         lab_not_3: 'Não é uma aula convencional com dezenas de posições.',
+
+        lab_locations_eyebrow: 'Estrutura',
         lab_locations_title: 'Locais e Estrutura',
-        lab_locations_desc: 'A definir. O formato será itinerante ou em local fixo selecionado para garantir a melhor experiência de aprendizado.',
+        lab_locations_desc: 'João Pessoa, PB. O formato será itinerante ou em local fixo selecionado para garantir a melhor experiência de aprendizado.',
+
         lab_cta_final_eyebrow: 'Faça parte',
         lab_cta_final_title: 'Evolução<br>Consciente',
         lab_cta_final_desc: 'Junte-se ao grupo focado no refinamento técnico e leve seu Jiu-Jitsu para o próximo nível.',
         lab_cta_btn: 'Falar no WhatsApp',
 
-        // Footer
         footer_text: '© 2026 Awaken BJJ. João Pessoa, Paraíba, Brasil.'
       }
     };
@@ -1551,16 +1082,14 @@
     // =============================================
     // LANGUAGE TOGGLE
     // =============================================
-    let currentLang = 'en';
+    let currentLang = 'pt';
 
     function setLanguage(lang) {
       currentLang = lang;
       const t = translations[lang];
 
-      // Update HTML lang attribute
       document.getElementById('root').setAttribute('lang', lang === 'pt' ? 'pt-BR' : 'en');
 
-      // Update all translatable elements
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (t[key]) {
@@ -1568,60 +1097,32 @@
         }
       });
 
-      // Update page title
       document.title = lang === 'pt'
         ? 'Awaken Lab — Estudo Técnico e Refinamento de Jiu-Jitsu'
         : 'Awaken Lab — Technical Study and Refinement in Jiu-Jitsu';
 
-      // Update meta description
       const metaDesc = document.querySelector('meta[name="description"]');
       if (metaDesc) {
         metaDesc.setAttribute('content', lang === 'pt'
-          ? 'Aulas particulares de Jiu-Jitsu em João Pessoa, Brasil. Coaching personalizado e baseado em conceitos com instrutor Faixa Preta 2º Grau com experiência internacional. A partir de $80/hora.'
-          : 'Private Jiu-Jitsu lessons in João Pessoa, Brazil. Personalized, concept-driven BJJ coaching with an internationally experienced 2nd Degree Black Belt instructor. Starting at $80/hour.');
+          ? 'Awaken Lab — Sessões de estudo técnico, drill e refinamento de Jiu-Jitsu em João Pessoa, Brasil.'
+          : 'Awaken Lab — Technical study sessions, drilling, and Jiu-Jitsu refinement in João Pessoa, Brazil.');
       }
 
-      // Update WhatsApp links based on language
-      const waLinks = document.querySelectorAll('a[href*="wa.me"]');
-      waLinks.forEach(link => {
-        const href = link.getAttribute('href');
-        if (href.includes('text=')) {
-          const baseUrl = 'https://wa.me/5583999619497?text=';
-          if (href.includes('pricing') || href.includes('valores')) {
-            link.setAttribute('href', baseUrl + encodeURIComponent(
-              lang === 'pt'
-                ? 'Olá, gostaria de saber mais sobre os valores das aulas particulares.'
-                : 'Hi, I\'d like to know more about pricing for private sessions.'
-            ));
-          } else {
-            link.setAttribute('href', baseUrl + encodeURIComponent(
-              lang === 'pt'
-                ? 'Olá, gostaria de agendar uma aula particular de Jiu-Jitsu.'
-                : 'Hi, I\'d like to schedule a private Jiu-Jitsu session.'
-            ));
-          }
-        }
-      });
-
-      // Update toggle button states across all toggles
       document.querySelectorAll('.lang-btn').forEach(btn => {
         const isActive = btn.getAttribute('data-lang') === lang;
         btn.classList.toggle('active', isActive);
         btn.setAttribute('aria-pressed', isActive);
       });
 
-      // Save preference
       try { localStorage.setItem('awaken-lang', lang); } catch(e) {}
     }
 
-    // Attach listeners to all language buttons
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         setLanguage(btn.getAttribute('data-lang'));
       });
     });
 
-    // Load saved language preference
     try {
       const saved = localStorage.getItem('awaken-lang');
       if (saved && translations[saved]) {
@@ -1666,7 +1167,6 @@
     mobileMenuBtn.addEventListener('click', openMobileNav);
     mobileClose.addEventListener('click', closeMobileNav);
 
-    // Show mobile lang toggle on small screens
     function checkMobileLang() {
       if (window.innerWidth <= 768) {
         langToggleMobile.style.display = 'flex';
@@ -1710,51 +1210,6 @@
         }
       });
     });
-  </script>
-
-  <!-- Structured Data for SEO -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Awaken BJJ — Private Jiu-Jitsu Coaching",
-    "description": "Private, personalized Brazilian Jiu-Jitsu lessons in João Pessoa, Brazil. Concept-driven coaching with a 2nd Degree Black Belt instructor.",
-    "url": "https://awakenbjj.com",
-    "telephone": "+5583999999999",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "João Pessoa",
-      "addressRegion": "Paraíba",
-      "addressCountry": "BR"
-    },
-    "priceRange": "$$",
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "-7.1195",
-      "longitude": "-34.8450"
-    },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      "opens": "06:00",
-      "closes": "21:00"
-    },
-    "sameAs": [],
-    "image": "assets/img/hero.png",
-    "founder": {
-      "@type": "Person",
-      "name": "Awaken Founder",
-      "jobTitle": "Head Instructor",
-      "knowsLanguage": ["Portuguese", "English"]
-    },
-    "makesOffer": {
-      "@type": "Offer",
-      "name": "Private Jiu-Jitsu Session",
-      "price": "80",
-      "priceCurrency": "USD",
-      "description": "One-hour private Brazilian Jiu-Jitsu coaching session"
-    }
-  }
   </script>
 </body>
 </html>
